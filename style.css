@@ -115,6 +115,11 @@ body {
     text-transform: capitalize;
 }
 
+.weather-box, .temperature, .description {
+    display: flex;
+    justify-content: center;
+}
+
 .weather-details {
     width: 100%;
     display: flex;
@@ -179,8 +184,8 @@ body {
 }
 
 .fadeIn {
-    animation: 0,5s fadeIn forwards;
-    animation-delay: 0,5s;
+    animation: 0,2s fadeIn forwards;
+    animation-delay: 0,2s;
 }
 
 @keyframes fadeIn {

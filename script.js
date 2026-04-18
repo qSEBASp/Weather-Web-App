@@ -34,10 +34,9 @@ search.addEventListener('click', () => {
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
 
-            console.log("El clima actual es:", json.weather[0].main);
-
             const iconCode = json.weather[0].icon;
                 image.src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+                image.style.width = '100%';
                 
                 temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
                 description.innerHTML = `${json.weather[0].description}`;
@@ -45,9 +44,9 @@ search.addEventListener('click', () => {
                 wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
                 weatherBox.style.display = 'block';
-                weatherDetails.style.display = 'block';
+                weatherDetails.style.display = 'flex';
                 weatherBox.classList.add('fadeIn');
                 weatherDetails.classList.add('fadeIn');
-                container.style.height = '590px';
+                container.style.height = '600px';
     })
 })
